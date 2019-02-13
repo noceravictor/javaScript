@@ -1,6 +1,5 @@
 ;(function(){
     const form = document.querySelector('.formNovoCartao')
-    let numeroCartao = 4;
 
     form.addEventListener('submit', function(){
         event.preventDefault()
@@ -21,22 +20,15 @@
             })
         }
         else{
+
+            let objNovoCartao = {
+                conteudo: textArea.value
+            }
             
-            const cartao = document.createElement('article')
-            const mural = document.querySelector('.mural')
+            criarCartao(objNovoCartao);
 
-            cartao.id = 'cartao_' + numeroCartao
-            cartao.classList.add('cartao')
-            cartao.tabIndex = 0;
-
-            const conteudo = `<p class="cartao-conteudo" contenteditable tabindex="0">${textArea.value}</p>`
-
-            cartao.insertAdjacentHTML("afterbegin", conteudo)
-
-            mural.insertAdjacentElement('afterbegin', cartao)
-            
-            numeroCartao++
-
+            textArea.focus();
+            form.reset();
 
         }
 
