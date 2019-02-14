@@ -1,0 +1,29 @@
+{
+  "name": "ceep",
+  "version": "1.0.0",
+  "description": "Ceep é um gerenciador de tarefas, com o intuito de auxiliar seu dia a dia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "./node_modules/.bin/babel src --out-dir dist --copy-files --watch --presets @babel/preset-env"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noceravictor/javaScript.git"
+  },
+  "author": "Victor Nocera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noceravictor/javaScript/issues"
+  },
+  "homepage": "https://github.com/noceravictor/javaScript#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5"
+  }
+}

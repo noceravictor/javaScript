@@ -22,7 +22,8 @@
         else{
 
             let objNovoCartao = {
-                conteudo: textArea.value
+                conteudo: textArea.value,
+                cor: '#EBEF40'
             }
             
             criarCartao(objNovoCartao);

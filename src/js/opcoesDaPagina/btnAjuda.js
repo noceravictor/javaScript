@@ -17,10 +17,25 @@
                 cor:'#9bccb9'
             }    
         ]
+
+        const ajax =  new XMLHttpRequest()
+
+        ajax.open('GET', 'http://ceep.herokuapp.com/cartoes/instrucoes')
         
-        for(let objAjuda of listaAjudas){
+        ajax.responseType = 'json'
+
+        ajax.send();
+        
+        ajax.addEventListener('load', function(){
+
+            listaAjudas = ajax.response.instrucoes
+
+            for(let objAjuda of listaAjudas){
                 criarCartao(objAjuda)
-        }
+            }
+            console.log(ajax.response.instrucoes)
+        })
+        
        
     })
 
